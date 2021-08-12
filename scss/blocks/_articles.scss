@@ -1,0 +1,143 @@
+// ARTICLES-SECTION
+.articles {
+  background: #F2F2F2;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.articles__title {
+  @include site-title;
+  font-size: 40px;
+  line-height: 64px;
+  letter-spacing: -0.714286px;
+
+}
+
+.article__list {
+  @include reset-list;
+  display: flex;
+  align-items: top;
+  margin-top: 40px;
+}
+
+.article__item {
+  width: 255px;
+  background-color: $color-white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.article__item~.article__item {
+  margin-left: 30px;
+}
+
+.articles__img {
+  width: 255px;
+  height: 200px;
+  margin: 0;
+  display: inline-block;
+}
+
+.articles__box {
+  padding: 24px;
+  background-color: $color-white;
+}
+
+.article__small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: -0.15625px;
+  color: #9597A5;
+}
+
+.articles__title {
+  @include site-title;
+}
+
+.articles__link {
+  @include link-reset;
+  color: $color-title;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.285714px;
+}
+
+.articles__link:hover {
+  color: $color-hover;
+}
+
+.articles__text {
+  @include site-text;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.203125px;
+}
+
+@include breakpoint-down(1050px) {
+  .article__item {
+    width: 24%;
+  }
+  .articles__img {
+    width: 100%;
+  } 
+}
+
+@include breakpoint-down(800px) {
+
+  .article__list {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .article__item {
+    margin-left: 0px;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-right: 20px;
+  }
+
+  .article__item~.article__item {
+    margin-left: 0px;
+  }
+
+  .articles__title {
+    font-size: 38px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: -0.571429px;
+  }
+}
+
+@include breakpoint-down(509px) {
+
+  .articles__title {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: -0.571429px;
+  }
+
+  .article__item {
+    margin-left: 0px;
+    width: 255px;
+    margin-bottom: 24px;
+    margin-right: 0px;
+  }
+
+  .articles__link {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 8px;
+    letter-spacing: -0.285714px;
+  }
+
+  .articles__text {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.203125px;
+  }
+}

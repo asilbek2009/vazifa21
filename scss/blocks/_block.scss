@@ -1,0 +1,8 @@
+.button {
+  @include btn;
+}
+
+.button:hover {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}

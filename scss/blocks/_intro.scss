@@ -1,0 +1,124 @@
+// INTRO SECTION
+.intro {
+  background: #F2F2F2;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.intro__wrapper {
+  position: relative;
+  padding: 170px 0;
+  @include display-reset;
+  z-index: 2;
+}
+
+.intro__content {
+  width: 410px;
+}
+
+.intro__title {
+  @include site-title;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px;
+}
+
+.intro__text {
+  @include site-text;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.28125px;
+  padding-top: 24px;
+  padding-bottom: 44px;
+}
+
+.intro__img {
+  position: absolute;
+  background-image: url("/img/hero-bg-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 810px;
+  height: 675.988px;
+  left: 418px;
+}
+
+.intro__images {
+  position: absolute;
+  top: -30px;
+  left: 163px;
+  width: 647px;
+  height: 908px;
+}
+
+.images {
+
+  display: none;
+  background-image: url("/img/bac.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .images__img {
+
+    left: 20px;
+    // display: none;
+  }
+}
+
+
+@include breakpoint-down(1050px) {
+  .intro {
+    background-color: $color-white;
+  }
+
+  .intro__wrapper {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .images {
+    display: block;
+    width: 100%;
+  }
+
+  .images__img {
+    display: block;
+    width: 90%;
+    height: 90%;
+    transform: translateX(2%);
+  }
+
+  .intro__content {
+    width: 700px;
+    padding: 0;
+  }
+
+  .intro__img {
+    display: none;
+  }
+
+  .intro__images {
+    display: none;
+  }
+
+  .intro__content {
+    width: 90%;
+  }
+
+  .intro__text {
+    text-align: center;
+  }
+
+  .intro__title {
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: -0.714286px;
+  }
+
+  .intro__button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 88px;
+  }
+}

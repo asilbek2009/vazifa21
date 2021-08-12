@@ -1,0 +1,137 @@
+// FOOTER
+.footer {
+  background-color: $color-footer;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: top;
+  padding: 48px 0px;
+}
+
+.footer__box {
+  @include display-reset;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 131px;
+}
+
+.footer__icon {
+  @include display-reset;
+}
+
+.footer__icon-link~.footer__icon-link {
+  margin-left: 13.33px;
+}
+
+.footer__icon-link:hover {
+  display: inline-block;
+
+  svg path {
+    fill: $color-hover;
+  }
+}
+
+.footer__list {
+  @include reset-list;
+  width: 160px;
+}
+
+.footer__list~.footer__list {
+  margin-left: 30px;
+}
+
+.footer__item {
+  margin-bottom: 8px;
+
+  a {
+    @include link-reset;
+    color: $color-text-white;
+    white-space: nowrap;
+  }
+
+  a:hover {
+    color: $color-hover;
+  }
+}
+
+.footer__right {
+  margin-left: 255px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 220px;
+
+  .footer__button {
+    width: 163px;
+  }
+
+  small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: right;
+    letter-spacing: -0.234375px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    white-space: nowrap;
+  }
+}
+
+@include breakpoint-down(966px) {
+  .footer__right {
+    margin-left: auto;
+  }
+  
+  .footer__box {
+    margin-right: 60px;
+  }
+}
+
+@include breakpoint-down(680px) {
+  .footer__wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .footer__list {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer__list~.footer__list {
+    margin-left: 50%;
+    margin-bottom: 34px;
+  }
+
+  .footer__right {
+    margin-left: auto;
+    margin-right: auto;   
+    text-align: center;
+    
+  }
+
+  .footer__button {
+    transform: translateX(-20%);
+    margin-bottom: 24px;
+  }
+  
+  .footer__box {
+    align-items: center;
+    margin-bottom: 34.25px;
+    margin-right: 0;
+    // width: 40%;
+    // transform: translateX(35%);
+  }
+
+  .footer__logo {
+    margin-bottom: 34.25px;
+  }
+
+  .footer__icon-link~.footer__icon-link {
+    margin-left: 20px;
+  }
+}

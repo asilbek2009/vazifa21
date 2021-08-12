@@ -1,0 +1,68 @@
+// Ro'yxatdagi stillarni olib tashlash
+
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+// display stilli
+
+@mixin display-reset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// site link style
+
+@mixin link-reset {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: $color;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.107692px;
+}
+
+// button
+
+@mixin btn {
+  padding: 8px 36px 8px 33px;
+  background: $site-gradient;
+  color: $color-text-white;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+// title
+@mixin site-title {
+  font-style: normal;
+  font-weight: 100;
+  color: $color-title;
+  margin: 0;
+}
+
+// text
+@mixin site-text {
+  font-style: normal;
+  font-weight: normal;
+  color: $color;
+  margin: 0;
+}
+
+// RESPONSIVE MIXINS STYLES
+
+@mixin breakpoint-down($site-width) {
+  @media only screen and (max-width: $site-width) {
+    @content;
+  }
+}

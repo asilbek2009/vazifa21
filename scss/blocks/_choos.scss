@@ -1,0 +1,151 @@
+// CHOOS-SECTION
+.choos {
+  background: #F4F5F7;
+  padding-top: 96px;
+  padding-bottom: 94px;
+}
+
+.choos__box {
+  width: 635px;
+  margin-bottom: 72px;
+}
+
+.choos__title {
+  @include site-title;
+  font-size: 40px;
+  line-height: 64px;
+  letter-spacing: -0.714286px;
+  margin-bottom: 16px;
+}
+
+.choos__text {
+  @include site-text;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.28125px;
+}
+
+.choos__list {
+  @include reset-list;
+  display: flex;
+  align-items: top;
+}
+
+.choos__item {
+  width: 255px;
+}
+
+.choos__item~.choos__item {
+  margin-left: 30px;
+}
+
+.choos__circle {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  background: $site-gradient;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.choos__item-title {
+  @include site-title;
+  text-transform: capitalize;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.428571px;
+  margin-top: 40px;
+  margin-bottom: 26px;
+}
+
+.choos__item-text {
+  @include site-text;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+}
+
+@include breakpoint-down(800px) {
+  .choos__box {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+  }
+
+  .choos__list {
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .choos__item {
+    width: 45%;
+    text-align: center;
+    margin: 30px 20px;
+  }
+
+  .choos__item:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .choos__item~.choos__item {
+    margin-left: 0;
+  }
+}
+
+@include breakpoint-down(520px) {
+  .choos__box {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .choos__title {
+    font-size: 32px;
+    line-height: 38px;
+
+  }
+
+  .choos__text {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .choos__list {
+    flex-wrap: wrap;
+    width: 95%;
+    margin-left: 20px;
+    margin-right: auto;
+
+  }
+
+  .choos__item {
+    width: 95%;
+    text-align: center;
+  }
+
+  .choos__item:nth-child(1) {
+    margin-left: 20px;
+  }
+
+  .choos__item~.choos__item {
+    margin-left: 20px;
+  }
+
+  .choos__item-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .choos__item-text {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.234375px;
+  }
+}
