@@ -427,6 +427,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
+  white-space: nowrap;
 }
 
 .button:hover {
